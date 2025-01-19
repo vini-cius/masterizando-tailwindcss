@@ -10,6 +10,7 @@ import {
 
 import { SvgComponent } from './logo'
 import { NavItem } from './nav-item'
+import { Profile } from './profile'
 import { UsedSpaceWidget } from './used-space-widget'
 
 export function Sidebar() {
@@ -43,6 +44,10 @@ export function Sidebar() {
         </nav>
 
         <UsedSpaceWidget />
+
+        <div className="h-px bg-zinc-200" />
+
+        <Profile />
       </div>
     </aside>
   )
