@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={inter.className} suppressHydrationWarning>
         <div className="grid-cols-app grid min-h-screen">
           <Sidebar />
           <main className="px-4 pb-12 pt-8">{children}</main>
