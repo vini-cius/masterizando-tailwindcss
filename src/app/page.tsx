@@ -1,8 +1,16 @@
-import { MailIcon } from 'lucide-react'
+import {
+  BoldIcon,
+  ItalicIcon,
+  LinkIcon,
+  ListIcon,
+  ListOrderedIcon,
+  MailIcon,
+} from 'lucide-react'
 
 import * as FileInput from '@/components/form/file-input'
 import { Select } from '@/components/form/select'
 import { SelectItem } from '@/components/form/select/select-item'
+import { Textarea } from '@/components/form/textarea'
 import * as Input from '@/components/input'
 import { SettingsTabs } from '@/components/settings-tabs'
 
@@ -148,7 +156,68 @@ export default function Home() {
               </span>
             </label>
 
-            <div></div>
+            <div className="space-y-3">
+              <div className="grid grid-cols-2 gap-3">
+                <Select placeholder="" defaultValue="normal">
+                  <SelectItem text="Normal" value="normal" />
+                  <SelectItem text="Markdown" value="markdown" />
+                </Select>
+
+                <div className="flex items-center gap-1">
+                  <button
+                    type="button"
+                    className="rounded p-2 hover:bg-zinc-50"
+                  >
+                    <BoldIcon
+                      className="size-4 text-zinc-500"
+                      strokeWidth={3}
+                    />
+                  </button>
+
+                  <button
+                    type="button"
+                    className="rounded p-2 hover:bg-zinc-50"
+                  >
+                    <ItalicIcon
+                      className="size-4 text-zinc-500"
+                      strokeWidth={3}
+                    />
+                  </button>
+
+                  <button
+                    type="button"
+                    className="rounded p-2 hover:bg-zinc-50"
+                  >
+                    <LinkIcon
+                      className="size-4 text-zinc-500"
+                      strokeWidth={3}
+                    />
+                  </button>
+
+                  <button
+                    type="button"
+                    className="rounded p-2 hover:bg-zinc-50"
+                  >
+                    <ListIcon
+                      className="size-4 text-zinc-500"
+                      strokeWidth={3}
+                    />
+                  </button>
+
+                  <button
+                    type="button"
+                    className="rounded p-2 hover:bg-zinc-50"
+                  >
+                    <ListOrderedIcon
+                      className="size-4 text-zinc-500"
+                      strokeWidth={3}
+                    />
+                  </button>
+                </div>
+              </div>
+
+              <Textarea defaultValue="I am a full-stack developer, specialized in Node.js and React." />
+            </div>
           </div>
 
           <div className="grid grid-cols-form gap-3 pt-5">
